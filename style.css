@@ -1,0 +1,180 @@
+:root {
+    --grey: #f5f5f5;
+    --blue: #3d88f9;
+    --black: #1a1a1a;
+}
+
+body.chat-open {
+    .chat-window {
+        display: flex;
+    }
+}
+
+.user-input {
+    width: 100%;
+    min-height: 40px;
+    max-height: 200px;
+    overflow-y: auto;
+    resize: none;
+}
+
+.chat-button {
+    position: absolute;
+    z-index: 998;
+    background-color: var(--black);
+    color: rgb(213, 106, 106);
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    
+
+    img {
+        width: 50px;
+    }
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #fff;
+}
+
+.titre {
+    text-align: center;
+    font-size: 100%;
+    color: #000000;
+}
+
+.chat-window {
+    background-color: #fff;
+    position: absolute;
+    z-index: 999;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow: hidden;
+
+    * {
+        font-family: "Raleway", sans-serif;
+    }
+
+    
+
+    .close {
+        border: none;
+        padding: 8px 0;
+        background-color: var(--black);
+        color: rgb(214, 180, 180);
+        border-radius: 20px 20px 0 0;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .chat {
+        flex: 1;
+    }
+
+    p {
+        border-radius: 20px;
+        width: 80%;
+        margin: 8px 0;
+        font-size: 16px;
+        padding: 16px;
+        }
+
+        div.model {
+
+            p {
+                background-color: #f8f6f6;
+            }
+
+            
+        }
+
+        div.user {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+            max-width: 500px;
+
+            p {
+                background-color: var(--blue);
+                color: rgb(255, 255, 255);
+            }
+        }
+
+        div.error {
+            p {
+                font-size: 14px;
+                text-align: center;
+                color: red;
+            }
+        }
+        
+
+    .input-area {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 8px;
+        border-top: 1px solid lightgray;
+        position: fixed;
+        bottom: -5px;
+        width: 88%;
+        }
+
+        input {
+            height: 40px;
+            flex: 1;
+            border: none;
+            background-color: var(--grey);
+            border-radius: 20px;
+            padding-left: 20px;
+            font-size: 16px;
+            width: 60%;
+        }
+
+        button {
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            border: none;
+            margin-left: 12px;
+            background-color: var(--blue);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 20px;
+            }
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+        }
+    }
+
+.loader {
+    width: 40px;
+    opacity: 0.4;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1.5s steps(4) infinite;
+  }
+  @keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
